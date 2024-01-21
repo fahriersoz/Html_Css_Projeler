@@ -1,0 +1,42 @@
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+
+nav.menu ul{
+    list-style-type: none;  /*noktalar gitti*/
+    margin: 0;
+    padding: 5px;
+    line-height: 30px;  /*satir aralarini acmak icin*/
+    background-color: rgb(26, 255, 0); /*arka ekrani renk verelim*/
+    display: none;
+}
+
+nav.menu ul a{
+    text-decoration: none; /*cizgiler kalkti*/
+    color: white;  /*yazi rengi*/
+    padding: 5px 20px;  /*tiklanabilir alanin genisletmek icin */
+    display: inline-block;
+}
+
+nav.menu ul a::before{
+    content:"::";
+    margin-right: 10px;
+}
+
+nav.menu label{    /*hamburger butonu*/
+    display: block;
+    font-size: 1.3rem;
+}
+
+nav.menu input[type="checkbox"]{  
+    display: none;
+}
+
+nav.menu input[type="checkbox"]:checked + ul{  /*tiklandiginda gorunur olacak*/
+    display: inline-block;
+}
+
+
+

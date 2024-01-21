@@ -1,0 +1,80 @@
+:root{
+    --color1:#dfd9d9;
+    --color2:#666161;
+    --color3:#efefef;
+    --color4:#cccccc;
+    --color5:#239db8;
+    --color6:#9aa345;
+}
+
+section.shopping-card{
+    display: inline-block; /*icindeki eleamanin genisligi kadar yer kapliyorlar*/
+}
+
+section.shopping-card table{
+    background-color: var(--color1); /*tabloma bir arka plan vermek istiyorum*/
+}
+
+section.shopping-card table th,
+section.shopping-card table td{
+    padding: 10px 15px;  /*Hucre aralarina bir bosluk veriyoruz*/
+    text-align: right;  /*basliklari duzenledik*/
+}
+
+section.shopping-card table th{
+    background-color: var(--color2);
+    color: var(--color3);
+}
+
+section.shopping-card table tbody tr:nth-child(odd){
+    background-color: var(--color4);  /*satirlari olusturduk*/
+}
+
+section.shopping-card table tbody tr:hover{
+    background-color: var(--color5);
+    color: var(--color3);
+    cursor: pointer;
+}
+
+section.shopping-card table th:nth-child(3),
+section.shopping-card table td:nth-child(3){
+    text-align: center;  /*3.sutunu ortaladi*/
+}
+
+section.shopping-card table tfoot th,
+section.shopping-card table th:nth-child(3)~th,
+section.shopping-card table td:nth-child(3)~td{
+    text-align: right;  /*sutunu ortaladi*/
+}
+
+section.shopping-card .buttons{
+    text-align: right;  /*buttonnslari cercevenin sag alt kosesine surukledik*/
+    margin-top: 20px;
+}
+
+section.shopping-card .buttons button{
+    background-color: var(--color6);
+    padding: 10px 15px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+section.shopping-card .buttons button{
+    background-color: var(--color1);
+    color: var(--color5);
+}
+
+
+section.shopping-card .buttons button:first-child::before{
+    content: "\f07a";
+    font: var(--fa-font-solid);
+    margin-right: 10px;
+}
+
+section.shopping-card .buttons button:last-child::before{
+    content: "\f09d";
+    font: var(--fa-font-solid);
+    margin-right: 10px;
+}
+
